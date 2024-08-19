@@ -35,16 +35,11 @@ namespace Hotelangebotssoftware
             double Gesamtpreis = 0d;
             double GesamtpreisBrutto = 0d;
             double MwStABetrag = 0d;
-            if (this.Aufenthaltsdauer > 0)
-            {
-                Gesamtpreis = Grundpreis * Aufenthaltsdauer * AnzahlGaeste;
-                MwStABetrag = Gesamtpreis * MwStA / 100;
-                GesamtpreisBrutto = Gesamtpreis + MwStABetrag;
-            }
-            else
-            {
-                EingabeInt("Geben Sie eine gültige Aufenthaltsdauer ein. (Zahl größer null)");
-            }
+
+            Gesamtpreis = Grundpreis * Aufenthaltsdauer * AnzahlGaeste;
+            MwStABetrag = Gesamtpreis * MwStA / 100;
+            GesamtpreisBrutto = Gesamtpreis + MwStABetrag;
+
             return GesamtpreisBrutto;
         }
 
